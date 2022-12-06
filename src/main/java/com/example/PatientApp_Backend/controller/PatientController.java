@@ -1,5 +1,6 @@
 package com.example.PatientApp_Backend.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,5 +11,10 @@ public class PatientController {
     public String AddPatient()
     {
         return "patient added successfully";
+    }
+    @GetMapping("/view")
+    public String ViewPatient()
+    {
+        return "Welcome to view all";
     }
 }
