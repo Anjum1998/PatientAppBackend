@@ -23,6 +23,7 @@ public class PatientController {
         System.out.println(p.getImage().toString());
         System.out.println(p.getDname().toString());
         dao.save(p);
+
         return "patient added successfully";
     }
     @CrossOrigin(origins = "*")
