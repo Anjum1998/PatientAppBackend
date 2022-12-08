@@ -36,4 +36,13 @@ public class PatientController {
     public List<Patient> ViewPatient() {
         return (List<Patient>) dao.findAll();
     }
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/search",consumes = "application/json",produces = "application/json")
+    public List<Patient> SearchPatient(@RequestBody Patient p)
+    {
+        String pid=String.valueOf(p.getPid());
+        System.out.println(pid);
+        return (List<Patient>) dao.SearchPatient(p.getPid());
+
+    }
 }
